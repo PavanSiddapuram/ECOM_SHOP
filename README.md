@@ -26,14 +26,14 @@ An advanced, full-stack e-commerce application with modern features, built to de
 ### Prerequisites  
 Ensure the following are installed:  
 - [Node.js](https://nodejs.org/)  
-- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)  
+- [npm](https://www.npmjs.com/)
 - [MongoDB](https://www.mongodb.com/)  
 - [Redis](https://redis.io/)  
 
 ### Steps to Run Locally  
 
 #### 1. Clone the Repository  
-```bash
+bash
 git clone <repository-url>
 cd Ecoms
 2. Install Dependencies
