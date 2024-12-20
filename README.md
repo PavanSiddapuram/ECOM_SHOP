@@ -1,130 +1,88 @@
-# E-Commerce Application
+# E-Commerce Application  
 
-## Overview
-This project is a full-stack e-commerce application designed to deliver an engaging and seamless online shopping experience. It features a scalable backend, a modern and responsive frontend, and advanced functionalities for users, administrators, and payment integrations.
+An advanced, full-stack e-commerce application with modern features, built to deliver a seamless shopping experience.  
 
-## Features
+## Features  
+- **User Authentication:** Secure JWT-based login with refresh/access tokens.  
+- **Product Management:** CRUD operations for products and categories.  
+- **Shopping Cart:** Add, update, and remove items from the cart.  
+- **Checkout:** Integrated Stripe for secure payments.  
+- **Coupons & Discounts:** Apply promotional codes for discounts.  
+- **Admin Dashboard:** Manage products, categories, and view analytics.  
+- **Sales Analytics:** Track sales and revenue with dynamic data visualization.  
+- **Performance Optimization:** Redis caching for faster responses.  
 
-### Frontend
-- **Technology Stack**: React.js, Tailwind CSS
-- **Features**:
-  - Responsive and clean user interface
-  - Featured products slider
-  - Shopping cart system with dynamic quantity updates
-  - Coupon system for discounts
-  - User dashboard for order tracking
-  - Sales analytics for customers
+---
 
-### Backend
-- **Technology Stack**: Node.js, Express.js, MongoDB
-- **Features**:
-  - Product and category management
-  - JWT-based authentication for secure sessions
-  - Redis caching for improved performance
-  - RESTful API design for seamless client-server communication
-  - Admin Dashboard with product and order management features
+## Tech Stack  
+**Frontend:** React.js, Tailwind CSS, Vite  
+**Backend:** Node.js, Express.js, MongoDB, Redis  
+**Payments:** Stripe  
 
-### Payment Integration
-- Integrated with **Stripe** for secure and efficient checkout.
+---
 
-## Deployment
-- **Frontend Deployment**: Deployed on a modern hosting platform with CDN support for optimal performance.
-- **Backend Deployment**: Optimized Node.js server with a connection to MongoDB Atlas.
+## Installation and Setup  
 
-## Project Highlights
-1. **Scalability**: The backend is designed to handle high traffic and large datasets efficiently.
-2. **Security**: Implemented best practices like JWT authentication, password hashing, and secure payment integrations.
-3. **Performance**: Used Redis caching to minimize database queries and improve load times.
-4. **User Experience**: Delivered a modern, intuitive, and responsive UI with smooth navigation.
+### Prerequisites  
+Ensure the following are installed:  
+- [Node.js](https://nodejs.org/)  
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)  
+- [MongoDB](https://www.mongodb.com/)  
+- [Redis](https://redis.io/)  
 
-## Installation and Setup
+### Steps to Run Locally  
 
-### Prerequisites
-Ensure you have the following installed on your system:
-- Node.js
-- MongoDB (or use MongoDB Atlas)
-- Redis (for caching)
+#### 1. Clone the Repository  
+```bash
+git clone <repository-url>
+cd Ecoms
+2. Install Dependencies
+Navigate to each directory and install the required dependencies:
 
-### Backend Setup
-1. Clone the repository:
-   ```bash
-   git clone <repository_url>
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file and configure the environment variables:
-   ```env
-   PORT=5000
-   MONGO_URI=<Your MongoDB connection string>
-   REDIS_URI=<Your Redis connection string>
-   JWT_SECRET=<Your JWT secret key>
-   STRIPE_SECRET_KEY=<Your Stripe secret key>
-   ```
-4. Start the server:
-   ```bash
-   npm start
-   ```
+For the frontend:
 
-### Frontend Setup
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file and configure the environment variables:
-   ```env
-   REACT_APP_API_URL=<Backend API URL>
-   REACT_APP_STRIPE_PUBLIC_KEY=<Your Stripe publishable key>
-   ```
-4. Start the development server:
-   ```bash
-   npm start
-   ```
+bash
+Copy code
+cd frontend
+npm install
+For the backend:
 
-## Usage
-1. Access the application at the specified URL after deployment.
-2. Register as a user to start shopping or log in as an admin to manage the store.
-3. Add products to the cart, apply coupons, and proceed to checkout using Stripe.
-4. Use the Admin Dashboard for managing products, categories, and orders.
+bash
+Copy code
+cd backend
+npm install
+3. Configure Environment Variables
+Create a .env file in both the frontend and backend directories with the necessary keys:
 
-## Technologies Used
+Backend .env Example:
 
-### Frontend
-- React.js
-- Tailwind CSS
-- Axios (for API requests)
+env
+Copy code
+MONGO_URI=<your-mongo-db-connection-string>
+REDIS_URL=<your-redis-connection-string>
+STRIPE_SECRET_KEY=<your-stripe-secret-key>
+JWT_SECRET=<your-jwt-secret>
+JWT_REFRESH_SECRET=<your-jwt-refresh-secret>
+Frontend .env Example:
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Redis
+env
+Copy code
+VITE_BACKEND_URL=http://localhost:5000
+4. Start the Servers
+Frontend:
 
-### Payment
-- Stripe
+bash
+Copy code
+cd frontend
+npm run dev
+Access the frontend at http://localhost:5173/.
 
-### Deployment
-- MongoDB Atlas (Database)
-- Hosting platforms with CDN
+Backend:
 
-## Future Enhancements
-- Add support for multiple languages and currencies.
-- Implement advanced analytics for administrators.
-- Integrate real-time order tracking.
+bash
+Copy code
+cd backend
+npm run dev
+Access the backend at http://localhost:5000/.
 
-## Contributions
-Contributions are welcome! Feel free to fork this repository and submit pull requests for new features, improvements, or bug fixes.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
-## Contact
-For any inquiries or feedback, feel free to reach out to:
-- **Email**: siddapurampavan9381@gmail.com
-
+Ensure MongoDB and Redis are running before starting the backend
